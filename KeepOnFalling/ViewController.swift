@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         let asd : SearchForBracket = SearchForBracket()
         print(asd.getValidString(stringForParse: "{asdasd}([)"))
         print(asd.getValidString(stringForParse: "{}[][{()}]HEL[LO]"))
+        print(asd.getValidString(stringForParse: "{}[][{()}]HEL[LO]{"))
     }
 
     override func didReceiveMemoryWarning() {

@@ -20,7 +20,7 @@ class SearchForBracket: NSObject {
             if stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == "{" || stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == "[" || stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == "("  {
             array.append(stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)])
             count += 1
-            continue
+            
             }
             
             if stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == "}" {
@@ -54,6 +54,9 @@ class SearchForBracket: NSObject {
             if indexZ == stringForParse.characters.count - 1 {
                 if count == 0 {
                     return true
+                }
+                if stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == "(" || stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == "[" || stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == "{" {
+                    return false
                 }
                 else {
                     return false
