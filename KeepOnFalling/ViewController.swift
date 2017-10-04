@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         print(asd.getValidString(stringForParse: "{asdasd}([)"))
         print(asd.getValidString(stringForParse: "{}[][{()}]HEL[LO]"))
         print(asd.getValidString(stringForParse: "{}[][{()}]HEL[LO]{"))
+        print(asd.getValidString(stringForParse: "([{()}]"))
+        print(asd.getValidString(stringForParse: "[([{[]}])"))
     }
 
     override func didReceiveMemoryWarning() {
