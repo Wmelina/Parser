@@ -27,7 +27,9 @@ class SearchForBracket: NSObject {
             }
             
             if stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == "}" {
-            if array[count - 1] == "{" {
+                if count == 0 {
+                    return false
+                } else if array[count - 1] == "{" {
                 array.remove(at: count - 1)
                 count -= 1
 //            print(count)
@@ -38,7 +40,9 @@ class SearchForBracket: NSObject {
                 
         }
             if stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == "]" {
-            if array[count - 1] == "[" {
+                if count == 0 {
+                    return false
+                } else if array[count - 1] == "[" {
                 array.remove(at: count - 1)
                 count -= 1
 //                print(count)
@@ -48,7 +52,9 @@ class SearchForBracket: NSObject {
             }
         }
             if stringForParse[stringForParse.index(firstIndex, offsetBy: indexZ)] == ")" {
-            if array[count - 1] == "(" {
+                if count == 0 {
+                    return false
+                } else if array[count - 1] == "(" {
                 array.remove(at: count - 1)
                 count -= 1
 //            print(count)
